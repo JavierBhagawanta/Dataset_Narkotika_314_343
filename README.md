@@ -1,53 +1,51 @@
 # Dataset Narkotika PN Madiun
 
-Tugas 2 UTS Temu Kembali Informasi · Universitas Muhammadiyah Malang · Semester ganjil 2026/2027
+**Tugas 2 UTS Temu Kembali Informasi**  
+Universitas Muhammadiyah Malang · Semester Ganjil 2026/2027  
+Dosen pengampu Galih W. W.
 
-**Dosen pengampu** Galih W. W.
+## Anggota kelompok
 
-| Anggota | NIM |
+| Nama | NIM |
 | --- | --- |
-| Andi Tri Hanggoro Pamungkas | 202310370311343 |
 | Javier Bhagawanta | 202310370311314 |
+| Andi Tri Hanggoro Pamungkas | 202310370311343 |
 
 ## Cakupan dataset
 
-Kumpulan dokumen perkara Pidana Khusus dengan klasifikasi Narkotika dan Psikotropika dari **Pengadilan Negeri Madiun (PN Mad)**. Tahun dikelompokkan menurut tanggal putus.
+Arsip ini memuat **50 dokumen PDF** dari **Pengadilan Negeri Madiun (PN Mad)**. Seluruh dokumen berasal dari kategori **Pidana Khusus**, klasifikasi **Narkotika dan Psikotropika**.
 
-| Tahun putus | PDF |
+| Tahun putus | Jumlah PDF |
 | --- | ---: |
 | 2023 | 18 |
 | 2024 | 20 |
 | 2025 | 12 |
 | **Total** | **50** |
 
-Arsip memuat 2.055 halaman PDF. Nama berkas diseragamkan berdasarkan nomor perkara dan isi PDF dipertahankan. Setiap PDF memiliki nomor perkara dan hash SHA-256 yang unik dalam arsip.
+Pengelompokan memakai tahun pada tanggal putus. Arsip memuat 2.055 halaman. Isi PDF asli dipertahankan dan nama berkas diseragamkan berdasarkan nomor perkara. Nomor perkara dan hash SHA-256 unik untuk setiap PDF.
 
-## Struktur repositori
+## Berkas dan cara penggunaan
 
-| Berkas | Isi |
+| Berkas | Cara menggunakan |
 | --- | --- |
-| [Dataset/Narkotika.zip](Dataset/Narkotika.zip) | Folder `Narkotika/` berisi 50 PDF dari Direktori Putusan Mahkamah Agung RI |
-| [Overview/Overview.xlsx](Overview/Overview.xlsx) | Ringkasan 50 dokumen dan catatan sumber per dokumen |
-| `README.md` | Cakupan, cara penggunaan, catatan seleksi, dan daftar tautan resmi |
+| [Dataset/Narkotika.zip](Dataset/Narkotika.zip) | Unduh dan ekstrak folder `Narkotika/` untuk membaca 50 PDF. |
+| [Overview/Overview.xlsx](Overview/Overview.xlsx) | Buka lembar **Overview** untuk ringkasan perkara dan lembar **Verifikasi** untuk tanggal putus, nama PDF, halaman amar, jenis dokumen, status BHT, dan tautan sumber. |
 
-## Cara menggunakan
+Lembar **Overview** memuat lima kolom sesuai soal, yaitu **No**, **No Putusan**, **Lembaga Peradilan**, **Barang Bukti**, dan **Amar Putusan**. Teks amar diambil dari bagian **Mengadili** atau **Menetapkan** hingga sebelum penutup. Kolom **Barang Bukti** mengikuti butir yang tercantum dalam amar. Pada perkara `111/Pid.Sus/2023/PN Mad`, amar tidak memuat butir penetapan barang bukti. Untuk membaca sel yang panjang, pilih sel dan perluas bilah rumus Excel.
 
-1. Unduh dan ekstrak `Dataset/Narkotika.zip` untuk membuka PDF.
-2. Buka `Overview/Overview.xlsx`. Lembar **Overview** memuat lima kolom sesuai soal, yaitu **No**, **No Putusan**, **Lembaga Peradilan**, **Barang Bukti**, dan **Amar Putusan**.
-3. Gunakan lembar **Verifikasi** untuk mencocokkan nama PDF, tanggal putus, halaman amar, jenis dokumen, dan tautan ke sumber resmi.
+## Catatan verifikasi
 
-Amar diambil dari bagian **Mengadili** atau **Menetapkan** hingga sebelum penutup. Kolom Barang Bukti mengikuti butir barang bukti dalam amar. Spasi dan pemisah baris dirapikan untuk Excel. Untuk sel dengan teks panjang, pilih sel dan perluas bilah rumus. Pada perkara **111/Pid.Sus/2023/PN Mad**, bagian amar tidak memuat butir penetapan barang bukti sehingga kolomnya mencatat kondisi tersebut.
+- Arsip berisi **49 putusan dan 1 penetapan**. Dokumen `107/Pid.Sus/2024/PN Mad` berjudul **Penetapan** pada PDF sumber.
+- **Status berkekuatan hukum tetap (BHT) belum terverifikasi** untuk 50 dokumen. Manifest sumber mencatat bahwa keterangan BHT tidak tercantum pada halaman detail yang diperiksa.
 
-## Sumber dan catatan seleksi
+## Sumber dan daftar dokumen
 
-Sumber PDF dan metadata berasal dari [Direktori Putusan Mahkamah Agung RI](https://putusan3.mahkamahagung.go.id/direktori.html). Daftar berikut merujuk ke halaman detail masing-masing dokumen.
+PDF dan metadata berasal dari [Direktori Putusan Mahkamah Agung RI](https://putusan3.mahkamahagung.go.id/direktori.html). Klik nomor perkara untuk membuka halaman detail resminya.
 
-- **Jenis dokumen.** PDF perkara **107/Pid.Sus/2024/PN Mad** berjudul **Penetapan**. Arsip ini mempertahankan dokumen tersebut dari paket sumber sehingga komposisinya 49 putusan dan 1 penetapan.
-- **Status berkekuatan hukum tetap (BHT).** Status BHT belum terverifikasi untuk 50 dokumen. Manifest sumber mencatat bahwa keterangan BHT tidak tercantum pada halaman detail yang diperiksa.
+<details>
+<summary>Lihat daftar 50 dokumen</summary>
 
-## Daftar dokumen
-
-| No | Nomor perkara dan sumber resmi | Tanggal putus | Jenis |
+| No | Nomor perkara | Tanggal putus | Jenis dokumen |
 | ---: | --- | --- | --- |
 | 1 | [7/Pid.Sus/2023/PN Mad](https://putusan3.mahkamahagung.go.id/direktori/putusan/zaee845a0d08bc148893313532373539.html) | 2023-02-21 | Putusan |
 | 2 | [13/Pid.Sus/2023/PN Mad](https://putusan3.mahkamahagung.go.id/direktori/putusan/zaef298d29b4bff68829323035393333.html) | 2023-02-23 | Putusan |
@@ -99,8 +97,5 @@ Sumber PDF dan metadata berasal dari [Direktori Putusan Mahkamah Agung RI](https
 | 48 | [40/Pid.Sus/2025/PN Mad](https://putusan3.mahkamahagung.go.id/direktori/putusan/zaf0bad485f13342a7c3313235303339.html) | 2025-09-11 | Putusan |
 | 49 | [66/Pid.Sus/2025/PN Mad](https://putusan3.mahkamahagung.go.id/direktori/putusan/zaf0bad486d836e8a5f0313235303430.html) | 2025-09-11 | Putusan |
 | 50 | [75/Pid.Sus/2025/PN Mad](https://putusan3.mahkamahagung.go.id/direktori/putusan/zaf0a7cd120eca8aae1c303733393236.html) | 2025-10-09 | Putusan |
-"# Dataset_Narkotika_314_343" 
-"# Dataset_Narkotika_314_343" 
-#   D a t a s e t _ N a r k o t i k a _ 3 1 4 _ 3 4 3  
- #   D a t a s e t _ N a r k o t i k a _ 3 1 4 _ 3 4 3  
- 
+
+</details>
